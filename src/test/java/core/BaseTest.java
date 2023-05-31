@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 
 
 public class BaseTest {
-    public void setUp(){
+    public static void setUp(){
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
@@ -17,12 +17,12 @@ public class BaseTest {
     }
 
     @BeforeAll
-    public void init(){
+    public static void init(){
         setUp();
     }
 
     @AfterAll
-    public void tearDown(){
+    public static void tearDown(){
         Selenide.closeWebDriver();
     }
 
