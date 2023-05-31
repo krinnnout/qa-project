@@ -3,8 +3,8 @@ package core;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.After;
+import org.junit.Before;
 
 
 public class BaseTest {
@@ -16,12 +16,12 @@ public class BaseTest {
         Configuration.headless = false;
     }
 
-    @BeforeAll
+    @Before
     public static void init(){
         setUp();
     }
 
-    @AfterAll
+    @After
     public static void tearDown(){
         Selenide.closeWebDriver();
     }
