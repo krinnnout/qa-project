@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="api.ReqresTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-01T10:47:34" hostname="MYLEGIONCHIK" time="3.434">
+  <properties/>
+  <testcase name="checkAvatarAndIdTest()" classname="api.ReqresTest" time="3.434">
+    <failure message="java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Invalid type definition for type `api.UserData`: Argument #0 of constructor [constructor for `api.UserData` (5 args), annotations: {interface com.fasterxml.jackson.annotation.JsonCreator=@com.fasterxml.jackson.annotation.JsonCreator(mode=DEFAULT)} has no property name (and is not Injectable): can not use as property-based Creator&#10; at [Source: (String)&quot;{&quot;id&quot;:7,&quot;email&quot;:&quot;michael.lawson@reqres.in&quot;,&quot;first_name&quot;:&quot;Michael&quot;,&quot;last_name&quot;:&quot;Lawson&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/7-image.jpg&quot;}&quot;; line: 1, column: 1]" type="java.lang.RuntimeException">java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Invalid type definition for type `api.UserData`: Argument #0 of constructor [constructor for `api.UserData` (5 args), annotations: {interface com.fasterxml.jackson.annotation.JsonCreator=@com.fasterxml.jackson.annotation.JsonCreator(mode=DEFAULT)} has no property name (and is not Injectable): can not use as property-based Creator
+ at [Source: (String)&quot;{&quot;id&quot;:7,&quot;email&quot;:&quot;michael.lawson@reqres.in&quot;,&quot;first_name&quot;:&quot;Michael&quot;,&quot;last_name&quot;:&quot;Lawson&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/7-image.jpg&quot;}&quot;; line: 1, column: 1]
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)
+	at io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)
+	at io.restassured.path.json.JsonPath.getList(JsonPath.java:400)
+	at api.ReqresTest.checkAvatarAndIdTest(ReqresTest.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptTestMethod(InvocationInterceptor.java:118)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Invalid type definition for type `api.UserData`: Argument #0 of constructor [constructor for `api.UserData` (5 args), annotations: {interface com.fasterxml.jackson.annotation.JsonCreator=@com.fasterxml.jackson.annotation.JsonCreator(mode=DEFAULT)} has no property name (and is not Injectable): can not use as property-based Creator
+ at [Source: (String)&quot;{&quot;id&quot;:7,&quot;email&quot;:&quot;michael.lawson@reqres.in&quot;,&quot;first_name&quot;:&quot;Michael&quot;,&quot;last_name&quot;:&quot;Lawson&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/7-image.jpg&quot;}&quot;; line: 1, column: 1]
+	at app//com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:62)
+	at app//com.fasterxml.jackson.databind.DeserializationContext.reportBadTypeDefinition(DeserializationContext.java:1893)
+	at app//com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._validateNamedPropertyParameter(BasicDeserializerFactory.java:1162)
+	at app//com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitPropertyCreator(BasicDeserializerFactory.java:879)
+	at app//com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitAnyCreator(BasicDeserializerFactory.java:926)
+	at app//com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitConstructorCreators(BasicDeserializerFactory.java:466)
+	at app//com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:293)
+	at app//com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:222)
+	at app//com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:262)
+	at app//com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.createBeanDeserializer(BeanDeserializerFactory.java:151)
+	at app//com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer2(DeserializerCache.java:415)
+	at app//com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer(DeserializerCache.java:350)
+	at app//com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCache2(DeserializerCache.java:264)
+	at app//com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCacheValueDeserializer(DeserializerCache.java:244)
+	at app//com.fasterxml.jackson.databind.deser.DeserializerCache.findValueDeserializer(DeserializerCache.java:142)
+	at app//com.fasterxml.jackson.databind.DeserializationContext.findRootValueDeserializer(DeserializationContext.java:654)
+	at app//com.fasterxml.jackson.databind.ObjectMapper._findRootDeserializer(ObjectMapper.java:4956)
+	at app//com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4826)
+	at app//com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)
+	at app//io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
+	... 90 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[13:47:36.352 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://reqres.in:443
+13:47:36.368 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to reqres.in:443
+13:47:36.532 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+13:47:36.534 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:47:36.534 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+13:47:36.535 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+13:47:36.535 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+13:47:36.535 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /api/users?page=2 HTTP/1.1
+13:47:36.535 [Test worker] DEBUG org.apache.http.wire -  >> "GET /api/users?page=2 HTTP/1.1[\r][\n]"
+13:47:36.536 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json[\r][\n]"
+13:47:36.536 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+13:47:36.536 [Test worker] DEBUG org.apache.http.wire -  >> "Host: reqres.in[\r][\n]"
+13:47:36.536 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+13:47:36.536 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.14 (Java/19.0.2)[\r][\n]"
+13:47:36.536 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:47:36.536 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+13:47:36.536 [Test worker] DEBUG org.apache.http.headers - >> GET /api/users?page=2 HTTP/1.1
+13:47:36.536 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json
+13:47:36.536 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+13:47:36.536 [Test worker] DEBUG org.apache.http.headers - >> Host: reqres.in
+13:47:36.536 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+13:47:36.536 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.14 (Java/19.0.2)
+13:47:36.536 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+13:47:36.561 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+13:47:36.564 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 01 Jun 2023 10:47:34 GMT[\r][\n]"
+13:47:36.564 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "X-Powered-By: Express[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Etag: W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Via: 1.1 vegur[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: max-age=14400[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "CF-Cache-Status: HIT[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Age: 6926[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OD0C6o7mO1Rh3ev7l5EHbpEr%2BzYxV5iIZ%2B%2BNw7Gc9olaSXfJfvK3FjKJokMbVjG3dU%2B6VpTwWuKJ7cHNCxI%2BSoIqbNjTpPgD9nGvE1JPfrsyWAn7kTWoLzakXQ%3D%3D"}],"group":"cf-nel","max_age":604800}[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Server: cloudflare[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "CF-RAY: 7d06e119be1bb9e9-OTP[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "Content-Encoding: gzip[\r][\n]"
+13:47:36.565 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:47:36.566 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 01 Jun 2023 10:47:34 GMT
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json; charset=utf-8
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << X-Powered-By: Express
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Etag: W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Via: 1.1 vegur
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: max-age=14400
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << CF-Cache-Status: HIT
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Age: 6926
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OD0C6o7mO1Rh3ev7l5EHbpEr%2BzYxV5iIZ%2B%2BNw7Gc9olaSXfJfvK3FjKJokMbVjG3dU%2B6VpTwWuKJ7cHNCxI%2BSoIqbNjTpPgD9nGvE1JPfrsyWAn7kTWoLzakXQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Vary: Accept-Encoding
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Server: cloudflare
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << CF-RAY: 7d06e119be1bb9e9-OTP
+13:47:36.566 [Test worker] DEBUG org.apache.http.headers - << Content-Encoding: gzip
+13:47:36.571 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+13:47:36.577 [Test worker] DEBUG io.restassured.internal.RestAssuredHttpBuilder - Parsing response as: application/json; charset=utf-8
+13:47:36.577 [Test worker] DEBUG org.apache.http.wire -  << "17b[\r][\n]"
+13:47:36.577 [Test worker] DEBUG org.apache.http.wire -  << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0x8d][0xd2][0xcd]n[0xa3]0[0x14][0x86][0xe1][q[0xcf]l](Y[0xf4][0xc7][0xab][0xaa][0xd2][0xcc]t[0xd1]n[0xa2][0xd9]U[0xa3][0xea][0x4][0xe][0xe0][0xd6][0xd8][0xee][0xb1]i[0xa6][0x8a]r[0xef]UM4T[0x88]D[0xec][0x0][0xbf][0x1f]z[0x84][0xd8][0x81][0xc7][0x86]@[0xad]$x[0xe2][0xe7][0xe1][0xe6]RBt[0x11][\r][0xa8]bu[0xb8]L'!u[0x15]F[0x4][0xf5][0xb4][0x3]][0x81][0xba][0x92]@[0x1d]j[0x3][\n]"
+13:47:36.577 [Test worker] DEBUG org.apache.http.wire -  << ":][0xb6]H&3[0xb8][\r][0xce][0xde]2[0xbd]1[0x85]L[[0x90]Pk[0xe][0xf1][0xd9]bG[0xa0][0xe0]q[0xe8]@[0x82][0xc1][0xf1][0xe9]CZ[0x81][0x4]|[0xc7][0x88][0xc][\n]"
+13:47:36.577 [Test worker] DEBUG org.apache.http.wire -  << "[0xda][0x18]}Py[0xfe][0xff]E[0xb9][0xee][0x9a][0xbc][0xc6][0x92]B~u[0xae];l({[0xf1][\r][0xec][0xe5]@[0xb9][0x1e])F[0xdb]*[0xe0]GV[0x13]7[0xfd]I[0xcc][0xc3]PN0[0xbf][0xe][0xbb][0xa5][0x9c][0xeb][0x19][0xce][0xcd][0xc8][0x89]n[0xa3]1duo_[0xe9]8[0xe5]O[0xaa][0xa6][0x92][0xaf][0xcd]R[0xc6][0xcd][0xc][0xa3][0xb8][0x18][0x1d][0x9b][0xf]v6[0xab]5[0x99]*[0x1c]w[0xdc]}USF[0xda],u[0x14][0x17]s[0x90]b[0x84]4[0xe4][0xb8][0xa1][0x8c][0xaa]-[0xf2])[0xca][0xef][0xd4]M,?[0x87][0xd5]bL1[0x87]Y[0x8d][0x18][0xc6][0xb2]%[0x93][0xb5]nK[0xc6][0x1c][0xb7][0xac]S6[0xb1][0xdc][0xa7][0xd1]b[0xca][0xea];[0xe5][0xaf][0x84][0xd0]{[0xef]8[0x82][0xda]A[0xcf]fv[0xfd][0xe3][0xd0][0x9c][0xb7][0x84][0x95][0xb6][\r]H[0x88][0xf4]/[0xa6][0xff]E[0xbc][0x12]y[0xb1][0xa6][0xb7]5[0x5]Q3[0x91][0x14][0xa5][0xb3][0x91][0xf5][0xa6][0x8f][0xda][0xd9] [0xa2]K[0x9f]J[0x4][0xe2]wbQ[0xba][0x10][0x83]@&[0x81][0xde]3[0x95][0x1a]#Ug[0xb0][0xdf]]]>&#x7f;<![CDATA[[0x2][0xf6][0x16][0x88]W[0x6][0x4][0x0][0x0]"
+13:47:36.577 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:47:36.579 [Test worker] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+13:47:36.579 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:47:36.579 [Test worker] DEBUG io.restassured.internal.RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+13:47:36.729 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@342394b3
+13:47:36.729 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+HTTP/1.1 200 OK
+Date: Thu, 01 Jun 2023 10:47:34 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"
+Via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: HIT
+Age: 6926
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OD0C6o7mO1Rh3ev7l5EHbpEr%2BzYxV5iIZ%2B%2BNw7Gc9olaSXfJfvK3FjKJokMbVjG3dU%2B6VpTwWuKJ7cHNCxI%2BSoIqbNjTpPgD9nGvE1JPfrsyWAn7kTWoLzakXQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 7d06e119be1bb9e9-OTP
+Content-Encoding: gzip
+
+{
+    "page": 2,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+        {
+            "id": 7,
+            "email": "michael.lawson@reqres.in",
+            "first_name": "Michael",
+            "last_name": "Lawson",
+            "avatar": "https://reqres.in/img/faces/7-image.jpg"
+        },
+        {
+            "id": 8,
+            "email": "lindsay.ferguson@reqres.in",
+            "first_name": "Lindsay",
+            "last_name": "Ferguson",
+            "avatar": "https://reqres.in/img/faces/8-image.jpg"
+        },
+        {
+            "id": 9,
+            "email": "tobias.funke@reqres.in",
+            "first_name": "Tobias",
+            "last_name": "Funke",
+            "avatar": "https://reqres.in/img/faces/9-image.jpg"
+        },
+        {
+            "id": 10,
+            "email": "byron.fields@reqres.in",
+            "first_name": "Byron",
+            "last_name": "Fields",
+            "avatar": "https://reqres.in/img/faces/10-image.jpg"
+        },
+        {
+            "id": 11,
+            "email": "george.edwards@reqres.in",
+            "first_name": "George",
+            "last_name": "Edwards",
+            "avatar": "https://reqres.in/img/faces/11-image.jpg"
+        },
+        {
+            "id": 12,
+            "email": "rachel.howell@reqres.in",
+            "first_name": "Rachel",
+            "last_name": "Howell",
+            "avatar": "https://reqres.in/img/faces/12-image.jpg"
+        }
+    ],
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
+13:47:37.033 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54225<->104.26.11.213:443 closed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

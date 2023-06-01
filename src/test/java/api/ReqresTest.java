@@ -2,7 +2,6 @@ package api;
 
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
