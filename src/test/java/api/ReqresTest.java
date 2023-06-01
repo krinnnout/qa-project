@@ -13,10 +13,10 @@ public class ReqresTest {
 
     @Test
     public void checkAvatarAndIdTest(){
+        Specifications.initSpecification(Specifications.requestSpecification(URL), Specifications.responseSpecification200OK());
         List<UserData> users = given()
                 .when()
-                .contentType(ContentType.JSON)
-                .get(URL + "api/users?page=2")
+                .get("api/users?page=2")
                 .then().log().all()
                 .extract().body().jsonPath().getList("data", UserData.class);
         users.forEach(user-> Assert.assertTrue(user.getAvatar().contains(user.getId().toString())));
